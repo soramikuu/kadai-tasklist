@@ -10,12 +10,16 @@
             <td>{{ $task->id }}</td>
         </tr>
         <tr>
-            <th>作成日時</th>
-            <td>{{ $task->created_at }}</td>
+            <th>タイトル</th>
+            <td>{{ $task->title }}</td>
         </tr>
         <tr>
             <th>タスク</th>
             <td>{{ $task->content }}</td>
+        </tr>
+        <tr>
+            <th>作成日時</th>
+            <td>{{ $task->created_at }}</td>
         </tr>
         @if ($task->updated_at != $task->created_at) 
             <th>更新日時</th>

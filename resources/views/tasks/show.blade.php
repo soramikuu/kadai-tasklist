@@ -18,6 +18,10 @@
             <td>{{ $task->content }}</td>
         </tr>
         <tr>
+            <th>ステータス</th>
+            <td>{{ $task->status }}</td>
+        </tr>
+        <tr>
             <th>作成日時</th>
             <td>{{ $task->created_at }}</td>
         </tr>

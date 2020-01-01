@@ -13,4 +13,4 @@
 
 Route::get('/', 'TasksController@index');
 
-Route::resource('tasks','TasksController');
+Route::resource('tasks','TasksController'); //第一引数はtasklistデータベースの中のtasksテーブルを指定

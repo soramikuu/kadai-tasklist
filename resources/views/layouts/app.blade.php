@@ -7,21 +7,7 @@
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     </head>
     <body>
-       <header>
-            <nav class="navbar navbar-expand-md navbar-light bg-light">
-                <a class="navbar-brand" href="/">Tasklist</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id=nav-bar>
-                    <ul class=nabvar-nav mr-auto></ul>　<!-- ナビゲーションバーをヘッダーの右側に表示するための記述 -->
-                    <ul class=navbar-nav>
-                        <li class="nav-item">{!! link_to_route('tasks.create', '新規タスクの追加', [],
-                        ['class' => 'nav-link']) !!}</li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+        @include('commons.navbar')
         
         <div class="container">
             @include('commons.error_messages')

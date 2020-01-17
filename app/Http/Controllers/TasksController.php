@@ -8,7 +8,6 @@ use App\Task;
 
 class TasksController extends Controller
 {
-    
     public function index()
     {
         $tasks = Task::/*orderBy('id', 'desc')->*/paginate(25);
@@ -35,13 +34,11 @@ class TasksController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required|max:191',
             'content' => 'required|max:191',
             'status' => 'required|max:10'
             ]);
         
         $task = new Task;
-        $task->title = $request->title;
         $task->content = $request->content;
         $task->status = $request->status;
         $task->save();
@@ -79,13 +76,11 @@ class TasksController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'title' => 'required|max:191',
             'content' => 'required|max:191',
             'status' => 'required|max:10'
             ]);
         
         $task = Task::find($id);
-        $task->title = $request->title;
         $task->content = $request->content;
         $task->status = $request->status;
         $task->save();

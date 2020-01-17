@@ -8,11 +8,6 @@
         <div class="col-6">
             {!! Form::model($task, ['route' => ['tasks.update', $task->id], 'method' => 'put']) !!} <!-- 第一引数は対象となるModelのインスタンス -->
                 <div class="form-group">
-                   {!! Form::label('title', 'タイトル:') !!}
-                   {!! Form::text('title', null, ['class' => 'form-control']) !!}
-                </div>
-
-                <div class="form-group">
                    {!! Form::label('content', 'タスク:') !!}
                    {!! Form::text('content', null, ['class' => 'form-control']) !!}
                 </div>

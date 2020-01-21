@@ -1,14 +1,15 @@
 <header class="mb-4">
-    <nav class="navbar nabvar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="/">Tasklist</a>
         
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
+        <button type="button" class="navbar-toggler" data-toggle="collapse"
+        data-target="#nav-bar">
             <span class="navbar-toggler-icon"></span>
         </button>
         
         <div class="collapse navbar-collapse" id="nav-bar">
             <ul class="navbar-nav mr-auto"></ul>
-            <ul class="navbar-nav">
+            <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())
                     <li class="nav-item"><a href="#" class="nav-link">Users</a></li>
                     <li class="nav-item dropdown">

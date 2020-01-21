@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'TasksController@index');
+Route::get('/', 'TaskpostsController@index');
 Route::resource('tasks','TasksController'); //第一引数はtasklistデータベースの中のtasksテーブルを指定
 
 // ユーザ登録
@@ -27,3 +27,6 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('users', 'UsersController', ['only' => ['store', 'destroy']]);
 });
+
+Route::resource('taskposts', 'TaskpostsController',
+    ['only' => ['store', 'destroy']]);

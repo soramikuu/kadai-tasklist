@@ -17,9 +17,8 @@ class TaskpostsController extends Controller
             $data = [
                 'user' => $user,
                 'taskposts' => $taskposts
-            ];
+                ];
         }
-        
         return view('welcome', $data);
     }
     

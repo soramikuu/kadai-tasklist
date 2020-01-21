@@ -1,15 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    @if (Auth::id() == user->id)
+    @if (Auth::check())
         {!! Form::open(['route' => 'taskposts.store']) !!}
             <div class="form-group">
                 {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '2']) !!}
                 {!! Form::submit('Post', ['class' => 'btn btn-info btn-block']) !!}
             </div>
         {!! Form::close() !!}
-    @endif
-    @if (Auth::check())
         <div class="row">
             <aside class="col-sm-4">
                 <div>
